@@ -5,7 +5,7 @@ use warnings;
 use base qw/Class::Data::Accessor/;
 __PACKAGE__->mk_classaccessors(qw/agent user_id supported/);
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 sub new {
     my $proto = shift;
@@ -58,7 +58,7 @@ HTTP::MobileUserID - mobile user ID is returned
   use HTTP::MobileAgent;
   
   my $agent  = HTTP::MobileAgent->new;
-  my $userid = HTTP::MobildUserID->new($agent);
+  my $userid = HTTP::MobileUserID->new($agent);
   
   if ( $userid->supported ) {
     print $userid->id;
